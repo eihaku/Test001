@@ -19,5 +19,6 @@ int fun4_4(int a);
 int fun4_5(int a);
 int fun6_1();
 int fun6_2(char b);
+int fun6_5(int a, int b);
 
 #endif // !_TEST_H

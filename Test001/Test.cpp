@@ -341,3 +341,28 @@ int fun6_2(char b)
 
     return 0;
 }
+
+int fun6_5(int a, int b)
+{
+    int i = 0;
+    int temp;
+    temp = b - a;
+    printf("§™§ƒ§Í§œ%d", temp);
+    if (temp >= 5000)
+    {
+        temp = temp - 5000;
+        printf("5000É“ºà£±√∂");
+    }
+    while (temp < 1000)
+    {
+        if (temp >= 1000)
+        {
+            temp = temp - 1000;
+            i++;
+        }
+        printf("1000É“ºà%d √∂", i);
+        i = 0;
+    }
+
+}
+

@@ -62,7 +62,16 @@ int main()
 
     //fun6_1();
 
-    fun6_2(17);
+    //fun6_2(17);
+    {
+        int moneyline[] = {10000,5000,1000,500,100,10,5,1};
+        printf("金額");
+        scanf("%d", a);
+        printf("\n支払い金額");
+        scanf("%d", b);
+
+        fun6_5(a,b);
+    }
 
 
 }
