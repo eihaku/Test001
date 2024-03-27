@@ -5,11 +5,11 @@
 int main()
 {
     int year;
-    int weight,speed;
+    int weight, speed;
     int money;
     int average;
     int sum;
-    int a,b,c,d;
+    int a, b, c, d;
     int eki[10];
     //scanf("%d", &year);
 
@@ -62,7 +62,7 @@ int main()
 
     //fun6_1();
 
-    fun6_2(900);
+    //fun6_2(900);
     //{
     //    int f;
     //    int g;
@@ -73,24 +73,29 @@ int main()
     //    fun6_5(f,g);
     //}
 
-    //{
-    //    int temp = 0;
-    //    struct student
-    //    {
-    //        char name[20];
-    //        int score;
-    //    };
-    //    struct student stu[3];
-    //    for (int i = 0; i < 3; i++) {
-    //        scanf("%s", stu[i].name);
-    //        scanf("%d", stu[i].score);
-    //        temp += stu[i].score;
-    //        if (stu[i].name == "END")
-    //        {
-    //            temp = fun6_6(temp);
-    //            printf("%d", temp);
-    //        }
-    //    }
-    //}
+//    {
+//        int temp = 0;
+//        struct student
+//        {
+//            char name[20];
+//            int score;
+//        };
+//        struct student stu[3];
+//        for (int i = 0; i < 3; i++) {
+//            printf("学生の名前、点数を入力してください");
+//            scanf("%s,%d", &stu[i].name, &stu[i].score);
+//            temp += stu[i].score;
+//            if (stu[i].name == "END")
+//            {
+//                temp = fun6_6(temp);
+//                printf("%d", temp);
+//            }
+//        }
+//    }
+
+
+    fun6_8();
+
+    return 0;
 }
 

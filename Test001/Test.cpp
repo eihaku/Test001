@@ -431,4 +431,22 @@ int fun6_6(int temp)
 {
     return temp / 3;
 }
+int fun6_8()
+{
+    int temp;
+    int num[] = { 9,3,8,1,5,10,6,4,2,7 };
+    for (int i = 0; i < 10; i++) {
+        for (int j = i + 1; j < 10; j++) {
+            if (num[i] > num[j]) {
+                temp = num[i];
+                num[i] = num[j];
+                num[j] = temp;
+            }
+        }
+    }
+    for (int i = 0; i < 10; i++) {
+        printf("%d ", num[i]);
+    }
+    return 0;
 
+}
