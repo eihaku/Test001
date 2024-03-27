@@ -347,22 +347,79 @@ int fun6_5(int a, int b)
     int i = 0;
     int temp;
     temp = b - a;
-    printf("§™§ƒ§Í§œ%d", temp);
+    printf("§™§ƒ§Í§œ%d\n", temp);
     if (temp >= 5000)
     {
         temp = temp - 5000;
-        printf("5000É“ºà£±√∂");
+        printf("5000É“ºà£±√∂\n");
     }
-    while (temp < 1000)
+    while (temp >= 1000)
     {
         if (temp >= 1000)
         {
             temp = temp - 1000;
             i++;
         }
-        printf("1000É“ºà%d √∂", i);
+    }
+    if (i != 0)
+    {
+        printf("1000É“ºà%d√∂\n", i);
         i = 0;
     }
+    if (temp >= 500)
+    {
+        temp = temp - 500;
+        printf("500É“£±√∂\n");
+    }
+
+    while (temp >= 100)
+    {
+        if (temp >= 100)
+        {
+            temp = temp - 100;
+            i++;
+        }
+    }
+    if (i != 0)
+    {
+        printf("100É“%d√∂\n", i);
+        i = 0;
+    }
+    while (temp >= 10)
+    {
+        if (temp >= 10)
+        {
+            temp = temp - 10;
+            i++;
+        }
+    }
+    if (i != 0)
+    {
+        printf("10É“%d√∂\n", i);
+        i = 0;
+    }
+
+
+    if (temp >= 5)
+    {
+        temp = temp - 5;
+        printf("5É“ºà£±√∂\n");
+    }
+    while (temp >= 1)
+    {
+        if (temp >= 1)
+        {
+            temp = temp - 1;
+            i++;
+        }
+    }
+    if (i != 0)
+    {
+        printf("1É“%d√∂\n", i);
+        i = 0;
+    }
+
+    return 0;
 
 }
 

@@ -9,7 +9,7 @@ int main()
     int money;
     int average;
     int sum;
-    int a, b,c,d;
+    int a,b,c,d;
     int eki[10];
     //scanf("%d", &year);
 
@@ -64,13 +64,13 @@ int main()
 
     //fun6_2(17);
     {
-        int moneyline[] = {10000,5000,1000,500,100,10,5,1};
+        int f;
+        int g;
         printf("金額");
-        scanf("%d", a);
-        printf("\n支払い金額");
-        scanf("%d", b);
-
-        fun6_5(a,b);
+        scanf("%d", &f);
+        printf("支払い金額");
+        scanf("%d", &g);
+        fun6_5(f,g);
     }
 
 
