@@ -319,22 +319,27 @@ int fun6_1() {
     }
     return 0;
 }
-int fun6_2(char b)
+int fun6_2(int b)
 {
-    char a[11] = { 0,2,7,10,15,16,19,20,30,90 };
+    int a[11] = { -3,2,7,10,15,16,19,20,30,90 };
 
     for (int i = 10; i > 0; i--)
     {
         if (b < a[i - 1])
         {
             a[i] = a[i - 1];
+            if (i == 1)
+            {
+                a[i - 1] = b;
+                break;
+            }
         }
         else {
             a[i] = b;
             break;
         }
     }
-    for (int i = 0; i < 11; i++)
+    for (int i = 0; i <= 10; i++)
     {
         printf("%d", a[i]);
     }
@@ -421,5 +426,9 @@ int fun6_5(int a, int b)
 
     return 0;
 
+}
+int fun6_6(int temp)
+{
+    return temp / 3;
 }
 

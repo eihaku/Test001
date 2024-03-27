@@ -62,17 +62,35 @@ int main()
 
     //fun6_1();
 
-    //fun6_2(17);
-    {
-        int f;
-        int g;
-        printf("金額");
-        scanf("%d", &f);
-        printf("支払い金額");
-        scanf("%d", &g);
-        fun6_5(f,g);
-    }
+    fun6_2(900);
+    //{
+    //    int f;
+    //    int g;
+    //    printf("金額");
+    //    scanf("%d", &f);
+    //    printf("支払い金額");
+    //    scanf("%d", &g);
+    //    fun6_5(f,g);
+    //}
 
-
+    //{
+    //    int temp = 0;
+    //    struct student
+    //    {
+    //        char name[20];
+    //        int score;
+    //    };
+    //    struct student stu[3];
+    //    for (int i = 0; i < 3; i++) {
+    //        scanf("%s", stu[i].name);
+    //        scanf("%d", stu[i].score);
+    //        temp += stu[i].score;
+    //        if (stu[i].name == "END")
+    //        {
+    //            temp = fun6_6(temp);
+    //            printf("%d", temp);
+    //        }
+    //    }
+    //}
 }
 
