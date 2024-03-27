@@ -1,0 +1,4 @@
+﻿  Test.cpp
+D:\work\Project\Test001\Test001\Test.cpp(6,9): warning C4101: 'temp': ローカル変数は 1 度も使われていません。
+D:\work\Project\Test001\Test001\Test.cpp(135,12): warning C4244: 'return': 'float' から 'int' への変換です。データが失われる可能性があります。
+  Test001.vcxproj -> D:\work\Project\Test001\x64\Debug\Test001.exe
