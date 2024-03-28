@@ -64,36 +64,18 @@ int main()
 
     //fun6_2(900);
 
-    {
-        int f;
-        int g;
-        printf("金額");
-        scanf("%d", &f);
-        printf("支払い金額");
-        scanf("%d", &g);
-        fun6_5(f, g);
-            
-    }
-
     //{
-    //    int temp = 0;
-    //    struct student
-    //    {
-    //        char name[4];
-    //        int score;
-    //    };
-    //    struct student stu[3];
-    //    for (int i = 0; i < 20; i++) {
-    //        printf("学生の名前、点数を入力してください");
-    //        scanf("%s,%d", stu[i].name, &stu[i].score);
-    //        temp += stu[i].score;
-    //        if (stu[i].name == "END")
-    //        {
-    //            temp = fun6_6(temp);
-    //            printf("%d", temp);
-    //        }
-    //    }
+    //    int f;
+    //    int g;
+    //    printf("金額");
+    //    scanf("%d", &f);
+    //    printf("支払い金額");
+    //    scanf("%d", &g);
+    //    fun6_5_2(f, g);
     //}
+
+
+    fun6_6();
 
 
     fun6_8();

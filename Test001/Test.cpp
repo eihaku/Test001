@@ -1,6 +1,8 @@
 ﻿#include <string>
 #include "Test001.h"
 #include "stdio.h"
+
+//うるう年//
 int fun2_2(int year) {
     char arr[12][4] = { "鼠", "牛", "虎", "兔", "龙", "蛇", "马","羊", "猴", "鸡", "狗", "猪" };
     int temp;
@@ -427,9 +429,35 @@ int fun6_5(int a, int b)
     }
     return 0;
 }
-int fun6_6(int temp)
+int fun6_6()
 {
-    return temp / 3;
+    int r;
+    int temp = 0;
+    char name[] = "END";
+
+    struct student
+    {
+        char name[4];
+        int score;
+    };
+    struct student stu[3];
+    for (int i = 1; i < 20; i++) {
+        printf("学生の名前を入力してください");
+        scanf("%s", stu[i].name);
+
+        r = stricmp(stu[i].name, name);
+        if (r == 0)
+        {
+            i = i - 1;
+            temp = temp / i;
+            printf("成績平均値は%d", temp);
+        }
+        printf("学生の点数を入力してください");
+        scanf("%d", &stu[i].score);
+
+        temp += stu[i].score;
+    }
+    return 0;
 }
 
 /*おつりプロフラム*/
