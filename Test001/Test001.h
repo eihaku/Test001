@@ -22,6 +22,5 @@ int fun6_2(int b);
 int fun6_5(int a, int b);
 int fun6_6();    //学生成績平均値//
 int fun6_8();
-int fun6_5_1(int a, int b);
-int fun6_5_2(int a, int b);
+int fun6_12(int b);
 #endif // !_TEST_H

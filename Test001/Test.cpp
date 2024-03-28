@@ -2,6 +2,79 @@
 #include "Test001.h"
 #include "stdio.h"
 
+
+
+int fun6_12(int b)
+{
+    char a[11] = { -3,2,7,10,15,16,19,20,30,90 };
+    int c = sizeof(a)/2;
+    int temp;
+
+    if (b > a[c])
+    {
+        for (int i = c; i <= sizeof(a); i++)
+        {
+            if (b < a[i]) {
+                temp = a[i];
+                a[i] = a[i + 1];
+                a[i + 1] = temp;
+            }
+            
+        }
+    }
+    if (b <= a[c])
+    {
+        for (int i = sizeof(a) / 2; i >= 0; i--)
+        {
+            if (i == 0)
+            {
+                a[i] = b;
+            }
+            if (b > a[i]) {
+                temp = b;
+                a[i + 1] = temp;
+                break;
+
+            }
+        }
+    }
+    for (int i = 0; i <= 10; i++)
+    {
+        printf("%d", a[i]);
+    }
+
+    return 0;
+}
+
+int fun6_2(int b)
+{
+    int a[11] = { -3,2,7,10,15,16,19,20,30,90 };
+
+    for (int i = 10; i > 0; i--)
+    {
+        if (b < a[i - 1])
+        {
+            a[i] = a[i - 1];
+            if (i == 1)
+            {
+                a[i - 1] = b;
+                break;
+            }
+        }
+        else {
+            a[i] = b;
+            break;
+        }
+    }
+    for (int i = 0; i <= 10; i++)
+    {
+        printf("%d", a[i]);
+    }
+
+    return 0;
+}
+
+
 //うるう年//
 int fun2_2(int year) {
     char arr[12][4] = { "鼠", "牛", "虎", "兔", "龙", "蛇", "马","羊", "猴", "鸡", "狗", "猪" };
@@ -322,146 +395,9 @@ int fun6_1() {
     return 0;
 }
 
-int fun6_2(int b)
-{
-    int a[11] = { -3,2,7,10,15,16,19,20,30,90 };
-
-    for (int i = 10; i > 0; i--)
-    {
-        if (b < a[i - 1])
-        {
-            a[i] = a[i - 1];
-            if (i == 1)
-            {
-                a[i - 1] = b;
-                break;
-            }
-        }
-        else {
-            a[i] = b;
-            break;
-        }
-    }
-    for (int i = 0; i <= 10; i++)
-    {
-        printf("%d", a[i]);
-    }
-
-    return 0;
-}
 
 /*おつりプロフラム*/
 int fun6_5(int a, int b)
-{
-    int i = 0;
-    int temp;
-    temp = b - a;
-    printf("おつりは%d\n", temp);
-    if (temp >= 5000)
-    {
-        temp = temp - 5000;
-        printf("5000円紙１枚\n");
-    }
-    while (temp >= 1000)
-    {
-        if (temp >= 1000)
-        {
-            temp = temp - 1000;
-            i++;
-        }
-    }
-    if (i != 0)
-    {
-        printf("1000円紙%d枚\n", i);
-        i = 0;
-    }
-    if (temp >= 500)
-    {
-        temp = temp - 500;
-        printf("500円１枚\n");
-    }
-
-    while (temp >= 100)
-    {
-        if (temp >= 100)
-        {
-            temp = temp - 100;
-            i++;
-        }
-    }
-    if (i != 0)
-    {
-        printf("100円%d枚\n", i);
-        i = 0;
-    }
-    while (temp >= 10)
-    {
-        if (temp >= 10)
-        {
-            temp = temp - 10;
-            i++;
-        }
-    }
-    if (i != 0)
-    {
-        printf("10円%d枚\n", i);
-        i = 0;
-    }
-
-
-    if (temp >= 5)
-    {
-        temp = temp - 5;
-        printf("5円紙１枚\n");
-    }
-    while (temp >= 1)
-    {
-        if (temp >= 1)
-        {
-            temp = temp - 1;
-            i++;
-        }
-    }
-    if (i != 0)
-    {
-        printf("1円%d枚\n", i);
-        i = 0;
-    }
-    return 0;
-}
-int fun6_6()
-{
-    int r;
-    int temp = 0;
-    char name[] = "END";
-
-    struct student
-    {
-        char name[4];
-        int score;
-    };
-    struct student stu[3];
-    for (int i = 1; i < 20; i++) {
-        printf("学生の名前を入力してください");
-        scanf("%s", stu[i].name);
-
-        r = stricmp(stu[i].name, name);
-        if (r == 0)
-        {
-            i = i - 1;
-            temp = temp / i;
-            printf("成績平均値は%d", temp);
-        }
-        printf("学生の点数を入力してください");
-        scanf("%d", &stu[i].score);
-
-        temp += stu[i].score;
-    }
-    return 0;
-}
-
-/*おつりプロフラム*/
-int fun6_5_2(int a, int b)
 {
     int i;
     int j;
@@ -483,6 +419,43 @@ int fun6_5_2(int a, int b)
     return 0;
 
 }
+
+//学生成績平均値//
+int fun6_6()
+{
+    int r;
+    int temp = 0;
+    char name[] = "END";
+
+    struct student
+    {
+        char name[20];
+        int score;
+    };
+    struct student stu[20];
+    for (int i = 0; i < 20; i++) {
+        printf("学生の名前を入力してください");
+        scanf("%s", stu[i].name);
+
+        r = stricmp(stu[i].name, name);
+        if (r == 0)
+        {
+            if (i == 0)
+            {
+                return 0;
+            }
+            temp = temp / i;
+            printf("成績平均値は%d", temp);
+        }
+        printf("学生の点数を入力してください");
+        scanf("%d", &stu[i].score);
+
+        temp += stu[i].score;
+    }
+    return 0;
+}
+
+/*おつりプロフラム*/
 int fun6_8()
 {
     int temp;
@@ -500,5 +473,4 @@ int fun6_8()
         printf("%d ", num[i]);
     }
     return 0;
-
 }
