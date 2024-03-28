@@ -319,6 +319,7 @@ int fun6_1() {
     }
     return 0;
 }
+
 int fun6_2(int b)
 {
     int a[11] = { -3,2,7,10,15,16,19,20,30,90 };
@@ -347,6 +348,7 @@ int fun6_2(int b)
     return 0;
 }
 
+/*おつりプロフラム*/
 int fun6_5(int a, int b)
 {
     int i = 0;
@@ -428,6 +430,30 @@ int fun6_5(int a, int b)
 int fun6_6(int temp)
 {
     return temp / 3;
+}
+
+/*おつりプロフラム*/
+int fun6_5_2(int a, int b)
+{
+    int i;
+    int j;
+    int num[8] = { 5000,1000,500,100,50,10,5,1 };
+    int temp;
+
+    temp = b - a;
+
+    for (i = 0; i < 8; i++)
+    {
+        j = 0;
+        while (temp >= num[i])
+        {
+            j++;
+            temp = temp - num[i];
+        }
+        printf("%d円%d枚\n", num[i], j);
+    }
+    return 0;
+
 }
 int fun6_8()
 {
