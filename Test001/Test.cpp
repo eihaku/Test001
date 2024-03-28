@@ -1,13 +1,13 @@
-#include <string>
+ï»¿#include <string>
 #include "Test001.h"
 #include "stdio.h"
 int fun2_2(int year) {
-    char arr[12][4] = { "Êó", "Å£", "»¢", "ÍÃ", "Áú", "Éß", "Âí","Ñò", "ºï", "¼¦", "¹·", "Öí" };
+    char arr[12][4] = { "é¼ ", "ç‰›", "è™", "å…”", "é¾™", "è›‡", "é©¬","ç¾Š", "çŒ´", "é¸¡", "ç‹—", "çŒª" };
     int temp;
 
     if (year == 1996)
     {
-        printf("Êó");
+        printf("é¼ ");
         return 0;
     }
     //temp = year - 1996;
@@ -39,12 +39,12 @@ int fun2_2(int year) {
     return 0;
 }
 
-int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
+int fun2_4(int weight, int speed) //speed = 1é€Ÿé”; speed = 0ã€€æ™®é€šé”
 {
     int money = 0;
     if (weight <= 50)
     {
-        printf("¶¨ĞÎ\n");
+        printf("å®šå½¢\n");
         if (weight <= 25)
         {
             money = 80;
@@ -53,7 +53,7 @@ int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
                 money = money + 270;
             }
 
-            printf("%dƒÒ", money);
+            printf("%då††", money);
         }
         else
         {
@@ -63,12 +63,12 @@ int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
                 money = money + 270;
             }
 
-            printf("%dƒÒ", money);
+            printf("%då††", money);
         }
     }
     if (weight <= 500 && weight >50)
     {
-        printf("¶¨ĞÎÍâ\n");
+        printf("å®šå½¢å¤–\n");
         if (weight <= 100)
         {
             money = 140;
@@ -77,7 +77,7 @@ int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
                 money = money + 270;
             }
 
-            printf("%dƒÒ", money);
+            printf("%då††", money);
 
         }
         else if (weight <= 150)
@@ -88,7 +88,7 @@ int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
                 money = money + 270;
             }
 
-            printf("%dƒÒƒÒ", money);
+            printf("%då††å††", money);
 
         }
         else if (weight <= 250)
@@ -99,7 +99,7 @@ int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
                 money = money + 270;
             }
 
-            printf("%dƒÒ", money);
+            printf("%då††", money);
 
         }
         else if (weight <= 500)
@@ -109,12 +109,12 @@ int fun2_4(int weight, int speed) //speed = 1ËÙß_; speed = 0¡¡ÆÕÍ¨ß_
             {
                 money = money + 370;
             }
-            printf("%dƒÒ", money);
+            printf("%då††", money);
         }
     }
     if (weight > 500)
     {
-        printf("ÖØ¤µ£µ£°£°³¬¤¨¤Ş¤·¤¿");
+        printf("é‡ã•ï¼•ï¼ï¼è¶…ãˆã¾ã—ãŸ");
     }
     return money;
 }
@@ -352,11 +352,11 @@ int fun6_5(int a, int b)
     int i = 0;
     int temp;
     temp = b - a;
-    printf("¤ª¤Ä¤ê¤Ï%d\n", temp);
+    printf("ãŠã¤ã‚Šã¯%d\n", temp);
     if (temp >= 5000)
     {
         temp = temp - 5000;
-        printf("5000ƒÒ¼ˆ£±Ã¶\n");
+        printf("5000å††ç´™ï¼‘æš\n");
     }
     while (temp >= 1000)
     {
@@ -368,13 +368,13 @@ int fun6_5(int a, int b)
     }
     if (i != 0)
     {
-        printf("1000ƒÒ¼ˆ%dÃ¶\n", i);
+        printf("1000å††ç´™%dæš\n", i);
         i = 0;
     }
     if (temp >= 500)
     {
         temp = temp - 500;
-        printf("500ƒÒ£±Ã¶\n");
+        printf("500å††ï¼‘æš\n");
     }
 
     while (temp >= 100)
@@ -387,7 +387,7 @@ int fun6_5(int a, int b)
     }
     if (i != 0)
     {
-        printf("100ƒÒ%dÃ¶\n", i);
+        printf("100å††%dæš\n", i);
         i = 0;
     }
     while (temp >= 10)
@@ -400,7 +400,7 @@ int fun6_5(int a, int b)
     }
     if (i != 0)
     {
-        printf("10ƒÒ%dÃ¶\n", i);
+        printf("10å††%dæš\n", i);
         i = 0;
     }
 
@@ -408,7 +408,7 @@ int fun6_5(int a, int b)
     if (temp >= 5)
     {
         temp = temp - 5;
-        printf("5ƒÒ¼ˆ£±Ã¶\n");
+        printf("5å††ç´™ï¼‘æš\n");
     }
     while (temp >= 1)
     {
@@ -420,78 +420,11 @@ int fun6_5(int a, int b)
     }
     if (i != 0)
     {
-        printf("1ƒÒ%dÃ¶\n", i);
+        printf("1å††%dæš\n", i);
         i = 0;
     }
     return 0;
 }
-int fun6_5_1(int a, int b)
-{
-    int i,j;
-    int temp;
-    temp = b - a;
-    temp = temp % 5000;
-    printf("¤ª¤Ä¤ê¤Ï%d\n", temp);
-    if (temp > temp % 5000)
-    {
-        printf("5000ƒÒ¼ˆ£±Ã¶\n");
-        temp = temp - 5000;
-    }
-    if (temp > temp % 1000)
-    {
-        i = temp % 1000;
-        j = (temp - i) / 1000;
-
-        printf("1000ƒÒ¼ˆ%dÃ¶\n", j);
-        temp = temp - (i*1000);
-    }
-    if (temp > temp % 500)
-    {
-        printf("500ƒÒ£±Ã¶\n");
-        temp = temp - 500;
-    }
-    if (temp > temp % 100)
-    {
-        i = temp % 100;
-        j = (temp - i) / 100;
-
-        printf("100ƒÒ%dÃ¶\n", j);
-        temp = temp - (j * 100);
-    }
-    if (temp > temp % 50)
-    {
-        printf("50ƒÒ%dÃ¶\n", j);
-        temp = temp - 50;
-    }
-    if (temp > temp % 10)
-    {
-        i = temp % 10;
-        j = (temp - i) / 10;
-
-        printf("10ƒÒ%dÃ¶\n", j);
-        temp = temp - (j * 10);
-    }
-    if (temp > temp % 5)
-    {
-        printf("5ƒÒ%dÃ¶\n", j);
-        temp = temp - 5;
-    }
-    if (temp > temp % 1)
-    {
-        i = temp % 10;
-        j = (temp - i) / 10;
-
-        printf("10ƒÒ%dÃ¶\n", j);
-        temp = temp - (j * 10);
-    }
-    if (temp == 0)
-    {
-        return 0;
-    }
-
-
-}
-
 int fun6_6(int temp)
 {
     return temp / 3;
