@@ -423,10 +423,75 @@ int fun6_5(int a, int b)
         printf("1É“%d√∂\n", i);
         i = 0;
     }
-
     return 0;
+}
+int fun6_5_1(int a, int b)
+{
+    int i,j;
+    int temp;
+    temp = b - a;
+    temp = temp % 5000;
+    printf("§™§ƒ§Í§œ%d\n", temp);
+    if (temp > temp % 5000)
+    {
+        printf("5000É“ºà£±√∂\n");
+        temp = temp - 5000;
+    }
+    if (temp > temp % 1000)
+    {
+        i = temp % 1000;
+        j = (temp - i) / 1000;
+
+        printf("1000É“ºà%d√∂\n", j);
+        temp = temp - (i*1000);
+    }
+    if (temp > temp % 500)
+    {
+        printf("500É“£±√∂\n");
+        temp = temp - 500;
+    }
+    if (temp > temp % 100)
+    {
+        i = temp % 100;
+        j = (temp - i) / 100;
+
+        printf("100É“%d√∂\n", j);
+        temp = temp - (j * 100);
+    }
+    if (temp > temp % 50)
+    {
+        printf("50É“%d√∂\n", j);
+        temp = temp - 50;
+    }
+    if (temp > temp % 10)
+    {
+        i = temp % 10;
+        j = (temp - i) / 10;
+
+        printf("10É“%d√∂\n", j);
+        temp = temp - (j * 10);
+    }
+    if (temp > temp % 5)
+    {
+        printf("5É“%d√∂\n", j);
+        temp = temp - 5;
+    }
+    if (temp > temp % 1)
+    {
+        i = temp % 10;
+        j = (temp - i) / 10;
+
+        printf("10É“%d√∂\n", j);
+        temp = temp - (j * 10);
+    }
+    if (temp == 0)
+    {
+        return 0;
+    }
+
 
 }
+
 int fun6_6(int temp)
 {
     return temp / 3;

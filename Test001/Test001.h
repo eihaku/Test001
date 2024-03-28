@@ -22,4 +22,5 @@ int fun6_2(int b);
 int fun6_5(int a, int b);
 int fun6_6(int temp);
 int fun6_8();
+int fun6_5_1(int a, int b);
 #endif // !_TEST_H
