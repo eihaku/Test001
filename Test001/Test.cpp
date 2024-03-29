@@ -6,46 +6,28 @@
 
 int fun6_12(int b)
 {
-    char a[11] = { -3,2,7,10,15,16,19,20,30,90 };
-    int c = sizeof(a)/2;
-    int temp;
+    int num[] = { 0,1,2,3,4,5,6,7,8,9,88,99 };
+    int low = 0;
+    int high = sizeof(num) / sizeof(int);
+    int mid = 0;
 
-    if (b > a[c])
+    while (low <= high)
     {
-        for (int i = c; i <= sizeof(a); i++)
-        {
-            if (b < a[i]) {
-                temp = a[i];
-                a[i] = a[i + 1];
-                a[i + 1] = temp;
-            }
-            
-        }
+        mid = (low + high) / 2;
+        if (num[mid] < b)
+            low = mid + 1;
+        else if (num[mid] > b)
+            high = mid - 1;
+        else
+            break;
     }
-    if (b <= a[c])
-    {
-        for (int i = sizeof(a) / 2; i >= 0; i--)
-        {
-            if (i == 0)
-            {
-                a[i] = b;
-            }
-            if (b > a[i]) {
-                temp = b;
-                a[i + 1] = temp;
-                break;
-
-            }
-        }
-    }
-    for (int i = 0; i <= 10; i++)
-    {
-        printf("%d", a[i]);
-    }
+    if (low > high)
+        printf("%d見つけない", b);
+    else
+        printf("%d見つけた", b);
 
     return 0;
 }
-
 int fun6_2(int b)
 {
     int a[11] = { -3,2,7,10,15,16,19,20,30,90 };
