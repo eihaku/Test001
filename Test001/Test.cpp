@@ -2,8 +2,47 @@
 #include "Test001.h"
 #include "stdio.h"
 
+//ファイルのデータ読み込み売上金額合算
+int fun6_13()
+{
+    int a;
+    int b;
+    int c;
+    int d;
+    int temp1;
+    int temp2 = 0;
+    int num;
+    FILE* fp;
 
+    if ((fp = fopen("test.txt", "rb")) == NULL) {
+        printf("%s open errer [rb] \n", "test.txt");
+        exit(-1);
+    }
+    fscanf(fp, "%d", &a);
+    fscanf(fp, "%d", &b);
+    temp1 = b;
+    for (int i = 0; i < 8; i++)
+    {
+        fscanf(fp, "%d", &c);
+        fscanf(fp, "%d", &d);
 
+        if (c == a)
+        {
+            num = d;
+            temp2 += temp1;
+            temp1 = num;
+        }
+        else {
+            printf("%d:%d\n", a, temp2);
+            a = c;
+            temp1 = d;
+            temp2 = 0;
+        }
+    }
+    printf("%d:%d\n", a, temp2);
+
+    return 0;
+}
 int fun6_12(int b)
 {
     int num[] = { 0,1,2,3,4,5,6,7,8,9,88,99 };
