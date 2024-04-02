@@ -2,6 +2,129 @@
 #include "Test001.h"
 #include "stdio.h"
 
+int fun7_4()
+{
+    FILE* fp;
+
+    int size = 0;
+    char a[26];
+    if ((fp = fopen("AtoZ.txt", "rb")) == NULL) {
+        printf("%s open errer [rb] \n", "AtoZ.txt");
+        exit(-1);
+    }
+    while (size != 26)
+    {
+        scanf("%d", &a);
+        gets_s(a);
+        for (int i = 0; a[i] != '\0'; i++)
+        {
+            size++;
+        }
+        printf("%d", size);
+    }
+    fclose(fp);
+
+    return 0;
+}
+
+//int fun7_3(int a)
+//{
+//    int temp;
+//    if (a > 5000)
+//    {
+//        temp = a - 5000;
+//        printf("\%d(おつり\5000) おつり１枚", 10000 - temp);
+//    }
+//    return 0;
+//}
+
+int fun7_2()
+{
+    int a,b,c;
+    int a1, b1, c1;
+    int num1, num2, num3;
+    printf("商品Aは何個必要＞");
+    scanf("%d", &a);
+    printf("商品Bは何個必要＞");
+    scanf("%d", &b);
+    printf("商品Cは何個必要＞");
+    scanf("%d", &c);
+    a1 = a / 3;
+    b1 = b / 5;
+    c1 = c / 10;
+    if (a1 >= 1)
+    {
+        num1 = a - a1 *3;
+        printf("A　コンビニで%d個/DSで%d個\n", num1, a1);
+        num1 = a1*250+num1 * 100;
+
+    }
+    else {
+        num1 = a * 100;
+        printf("A　コンビニで%d個/DSで0個\n", a);
+    }
+    if (b1 >= 1)
+    {
+        num2 = b - b1 * 5;
+        printf("B　コンビニで%d個/DSで%d個\n", num2, b1);
+        num2 = b1*800+num2 * 100;
+
+    }
+    else {
+        num2 = b * 200;
+        printf("B　コンビニで%d個/DSで0個\n", b);
+    }
+    if (c1 >= 1)
+    {
+        num3 = c  - c1 * 10;
+        printf("C　コンビニで%d個/DSで%d個\n", num3, c1);
+        num3 = c1*2500+num3 * 100;
+
+    }
+    else {
+        num3 = c * 300;
+        printf("C　コンビニで%d個/DSで0個\n", c);
+    }
+    if (a1 * 3 + b1 * 5 + c1 * 10 < 10 && a1 * 3 + b1 * 5 + c1 * 10 >= 3)
+    {
+        printf("交通費　５００円\n");
+    }
+    else if (a1 * 3 + b1 * 5 + c1 * 10 >= 10)
+    {
+        printf("交通費　１０００円\n");
+    }
+    else if (a1 * 3 + b1 * 5 + c1 * 10 == 0)
+    {
+        printf("交通費　０円\n");
+    }
+    num1 = num1 + num2 + num3;
+    printf("合算%d\n", num1);
+    return 0;
+
+
+}
+
+int fun7_1()
+{
+    int i, j;
+
+    for (i = 2; i <= 50; i++)
+    {
+        for (j = 2; j <= i; j++)
+        {
+            if (i % j == 0)
+            {
+                break;
+            }
+        }
+        if (i == j)
+        {
+            printf("%d ", i);
+        }
+    }
+    return 0;
+}
+
 //ファイルのデータ読み込み売上金額合算
 int fun6_13()
 {
@@ -39,6 +162,7 @@ int fun6_13()
             temp2 = 0;
         }
     }
+    fclose(fp);
     printf("%d:%d\n", a, temp2);
 
     return 0;
