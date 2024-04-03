@@ -20,23 +20,55 @@ int fun7_4()
         {
             size++;
         }
-        printf("%d", size);
+        //printf("%d", size);
     }
     fclose(fp);
 
     return 0;
 }
 
-//int fun7_3(int a)
-//{
-//    int temp;
-//    if (a > 5000)
-//    {
-//        temp = a - 5000;
-//        printf("\%d(おつり\5000) おつり１枚", 10000 - temp);
-//    }
-//    return 0;
-//}
+int fun7_3(int a)
+{
+    int temp;
+    int j = 0;
+    int num1, num2, num3,num4;
+
+    if (a > 5000)
+    {
+        temp = a - 5000;
+        num1 = 10000 + temp;
+        num2 = 5500 + temp;
+        printf("%d(おつり5000)おつり１枚\n", num1);
+        printf("%d(おつり500)おつり１枚\n", num2);
+        for (int i = temp; i < 1000; i++)
+        {
+            i = i + 99;
+            j++;
+        }
+        num3 = j * 100 + temp+5000;
+        num4 = j * 100;
+        printf("%d(おつり%d) おつり%d枚\n", num3,num4,j);
+    }
+    else
+    {
+        temp = a % 1000;
+        num1 = 1000 + a;
+        num2 = 500 + a;
+        printf("%d(おつり1000)おつり１枚\n", num1);
+        printf("%d(おつり500)おつり１枚\n", num2);
+
+        for (int i = temp; i < 1000; i++)
+        {
+            i = i + 99;
+            j++;
+        }
+        num3 = j * 100 + a;
+        num4 = j * 100;
+        printf("%d(おつり%d) おつり%d枚\n", num3, num4, j);
+
+    }
+    return 0;
+}
 
 int fun7_2()
 {
@@ -104,6 +136,7 @@ int fun7_2()
 
 }
 
+//1-50素数
 int fun7_1()
 {
     int i, j;
@@ -352,7 +385,7 @@ int fun3_1()
         temp += arr[i];
     }
     temp = temp / (sizeof(arr) / sizeof(int));
-    return temp;
+    return 0;
 }
 
 int fun3_2()
