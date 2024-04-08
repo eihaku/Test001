@@ -28,4 +28,13 @@ int fun7_1();
 int fun7_2();
 int fun7_3(int a);
 int fun7_4();
+int fun10_1();
+int fun10_2();
+int text(int number);
+int fun10_3();
+int fun10_4();
+int fun10_5();
+int fun10_6();
+
+
 #endif // !_TEST_H

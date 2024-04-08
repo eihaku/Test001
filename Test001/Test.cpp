@@ -1,6 +1,127 @@
 ﻿#include <string>
 #include "Test001.h"
 #include "stdio.h"
+int fun10_6()
+{
+    char str[100];
+    fgets(str, 100, stdin);
+
+    int len = strlen(str) - 1;
+    int i = 0;
+    for (i = 0; i < len / 2; i++)
+    {
+        if (str[i] != str[len - 1 - i])
+        {
+            break;
+        }
+    }
+
+    if (i != len / 2)
+    {
+        printf("回文ではない\n");
+    }
+    else
+    {
+        printf("回文です\n");
+    }
+    return 0;
+}
+int fun10_5()
+{
+    int n = 0;
+    int i = 0;
+    printf("数字を入力してください：");
+    scanf("%d", &n);
+
+    for (i = 2; i < n; i++)
+    {
+        if (0 == n % i)
+        {
+            printf("素数ではない\n");
+            return 0;
+        }
+    }
+    printf("素数です\n");
+    return 0;
+}
+int fun10_4()
+{
+    char str[100];
+    char temp[100];
+    int i = 0;
+    int j = 0;
+    fgets(str, 100, stdin);
+
+    while (str[i] != '\n')
+    {
+        if ('a' != str[i])
+        {
+            temp[j++] = str[i];
+        }
+        i++;
+    }
+    temp[j] = '\0';
+    fputs(temp, stdout);
+    printf("\n");
+    return 0;
+}
+int fun10_3()
+{
+int max = 0;
+double avg = 0;
+int n[5];
+int i = 0;
+int sum = 0;
+
+for (i = 0; i < 5; i++)
+{
+    scanf("%d", &n[i]);
+    sum += n[i];
+    if (n[i] > max)
+    {
+        max = n[i];
+    }
+}
+
+avg = sum / 5.0;
+printf("MAX：%d,平均值：%lf\n", max, avg);
+return 0;
+}
+int fun10_2()
+{
+    int i;
+    for (i = 0; i < 100; i++)
+    {
+        if (text(i))
+            printf("%2dは...奇数\n", i);
+        else printf("%2dは偶数\n", i);
+    }
+    return 0;
+}
+int text(int number)
+{
+    if (number % 2 == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return 1;
+    }
+}
+int fun10_1()
+{
+    int i;
+    for (i = 1; i <= 100; i++)
+    {
+        if (i % 2 != 0)
+        {
+            printf("%d\t", i);
+        }
+    }
+    return 0;
+
+}
 
 int fun7_4()
 {
