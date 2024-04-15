@@ -4,18 +4,17 @@
 
 int sum_num()
 {
-    double x, sum = 0, term = 1.0;
+    double x, sum = 1, term = 1.0;
     int n = 1;
 
     printf("x：");
     scanf("%lf", &x);
 
-    while (term >= 1e-4) {
+    while (term < 1e4) {
         term *= -x * x / (2 * n * (2 * n - 1));
         sum += term;
         n++;
     }
-    sum = 1 - sum;
     printf("近似值为：%lf\n", sum);
 
     return 0;
