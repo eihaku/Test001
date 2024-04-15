@@ -1,6 +1,105 @@
 ﻿#include <string>
 #include "Test001.h"
 #include "stdio.h"
+
+double sum_num(double x)
+{
+    double num = 0;
+    double num1 = 0;
+    double temp = x;
+    int i = 2;
+
+    while (fabs(num1) > 1e4)
+    {
+        num1 *= -1.0 * temp * temp / (i * (i - 1));
+        num += num1;
+        temp *= x * x;
+        i += 2;
+    }
+    return num;
+}
+
+int fun10_12()
+{
+    double pi = 3.1415926;
+    double r, d, s, l;
+    printf("rを入力してください:\n");
+    scanf("%lf", &r);
+    d = 2 * r;
+    l = pi * 2 * r;
+    s = 2 * pi * r * r;
+    printf("%lf%12lf%12lf", d, l, s);
+    return 0;
+}
+int fun10_11()
+{
+    int i, j, sum = 0;
+    for (i = 1; i < 10; i++) {
+        for (j = 1; j <= i; j++) {
+            sum = i * j;
+            printf("%d*%d=%-3d", i, j, sum);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+int fun10_10()
+{
+    int i, j, k;
+    for (i = 1; i < 5; i++) {
+        for (j = 1; j < 5; j++) {
+            for (k = 1; k < 5; k++) {
+                if (i != k && i != j && k != j)
+                    printf("%d%d%d\n", i, j, k);
+            }
+        }
+    }
+    return 0;
+}
+int fun10_9()
+{
+    int i = 0;
+    for (i = 200; i < 400; i++)
+    {
+        if (0 == i % 3 && 6 == i % 10)
+        {
+            printf("%d ", i);
+        }
+    }
+    printf("\n");
+
+    return 0;
+}
+int fun10_8()
+{
+    int sum = 0;
+    int i = 0;
+
+    for (i = 1; i < 200; i++)
+    {
+        if (0 != i % 5)
+        {
+            sum += i;
+        }
+    }
+
+    printf("合計%d\n", sum);
+    return 0;
+}
+int fun10_7(int a)
+{
+    int i = 0;
+    int count = 0;
+    for (i = 0; i < 32; i++)
+    {
+        if (((a >> i) & 1) == 1)
+        {
+            count++;
+        }
+    }
+    printf("%d\n", count);
+    return 0;
+}
 int fun10_6()
 {
     char str[100];

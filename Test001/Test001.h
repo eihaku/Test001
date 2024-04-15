@@ -35,6 +35,14 @@ int fun10_3();
 int fun10_4();
 int fun10_5();
 int fun10_6();
+int fun10_7(int a);
+int fun10_8();
+int fun10_9();
+int fun10_10();
+int fun10_11();
+int fun10_12();
+double sum_num(double x);
+
 
 
 #endif // !_TEST_H
