@@ -2,22 +2,25 @@
 #include "Test001.h"
 #include "stdio.h"
 
-double sum_num(double x)
+int sum_num()
 {
-    double num = 0;
-    double num1 = 0;
-    double temp = x;
-    int i = 2;
+    double x, sum = 0, term = 1.0;
+    int n = 1;
 
-    while (fabs(num1) > 1e4)
-    {
-        num1 *= -1.0 * temp * temp / (i * (i - 1));
-        num += num1;
-        temp *= x * x;
-        i += 2;
+    printf("x：");
+    scanf("%lf", &x);
+
+    while (term >= 1e-4) {
+        term *= -x * x / (2 * n * (2 * n - 1));
+        sum += term;
+        n++;
     }
-    return num;
+    sum = 1 - sum;
+    printf("近似值为：%lf\n", sum);
+
+    return 0;
 }
+
 
 int fun10_12()
 {

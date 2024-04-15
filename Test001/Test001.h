@@ -41,8 +41,7 @@ int fun10_9();
 int fun10_10();
 int fun10_11();
 int fun10_12();
-double sum_num(double x);
-
+int sum_num();
 
 
 #endif // !_TEST_H
