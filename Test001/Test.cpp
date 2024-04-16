@@ -4,18 +4,24 @@
 
 int sum_num()
 {
-    double x, sum = 1, term = 1.0;
+    int x;
+    double sum = 1.0, term = 1.0;
     int n = 1;
-
+    double temp=0;
     printf("x：");
-    scanf("%lf", &x);
+    scanf("%d", &x);
+    printf("term：%f \n", term);
+    printf("sum：%f \n", sum);
 
-    while (term < 1e4) {
+    while (fabs(term) > 1e-4) {
         term *= -x * x / (2 * n * (2 * n - 1));
         sum += term;
         n++;
+        temp = fabs(term);
+        printf("term：%f \n", term);
+        printf("sum：%f \n", sum);
     }
-    printf("近似值为：%lf\n", sum);
+    printf("近似值为：%f n = %d\n", sum,n);
     return 0;
 }
 
