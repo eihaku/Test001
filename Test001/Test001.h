@@ -42,6 +42,7 @@ int fun10_10();
 int fun10_11();
 int fun10_12();
 int sum_num();
+int sum_num2();
 
 
 #endif // !_TEST_H

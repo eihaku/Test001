@@ -2,26 +2,48 @@
 #include "Test001.h"
 #include "stdio.h"
 
+int sum_num2()
+{
+    int x;
+    double sum = 1.0, term;
+    int n = 1;
+    double temp = 0;
+    printf("x：");
+    scanf("%d", &x);
+    term = x;
+    sum = x;
+
+    while (fabs(term) > 1e-4) {
+        term *= (double)(-x * x) / (double)((n+1)* (n+2));
+        sum += term;
+        n = n + 2;
+        temp = fabs(term);
+        printf("term：%3d \n", term);
+        printf("sum：%30lf \n", sum);
+    }
+    printf("近似值为：%lf n = %d\n", sum, n);
+    return 0;
+}
 int sum_num()
 {
     int x;
     double sum = 1.0, term = 1.0;
     int n = 1;
-    double temp=0;
+    double temp = 0;
     printf("x：");
     scanf("%d", &x);
     printf("term：%f \n", term);
     printf("sum：%f \n", sum);
 
     while (fabs(term) > 1e-4) {
-        term *= -x * x / (2 * n * (2 * n - 1));
+        term *= (double)(-x * x) / (double)(2 * n * (2 * n - 1));
         sum += term;
         n++;
         temp = fabs(term);
-        printf("term：%f \n", term);
-        printf("sum：%f \n", sum);
+        printf("term：%3d \n", term);
+        printf("sum：%30lf \n", sum);
     }
-    printf("近似值为：%f n = %d\n", sum,n);
+    printf("近似值为：%lf n = %d\n", sum, n);
     return 0;
 }
 
