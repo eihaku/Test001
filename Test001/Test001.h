@@ -43,5 +43,4 @@ int fun10_11();
 int fun10_12();
 int sum_num();
 
-
 #endif // !_TEST_H

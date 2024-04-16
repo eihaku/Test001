@@ -16,7 +16,6 @@ int sum_num()
         n++;
     }
     printf("近似值为：%lf\n", sum);
-
     return 0;
 }
 
