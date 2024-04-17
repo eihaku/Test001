@@ -45,5 +45,4 @@ int sum_num();
 int sum_num2();
 
 
-
 #endif // !_TEST_H

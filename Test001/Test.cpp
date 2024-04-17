@@ -272,7 +272,7 @@ int fun7_4()
         //printf("%d", size);
     }
     fclose(fp);
-
+    printf("あなた負け");
     return 0;
 }
 
@@ -392,16 +392,20 @@ int fun7_1()
 
     for (i = 2; i <= 50; i++)
     {
-        for (j = 2; j <= i; j++)
+        if (i <= 3)
+        {
+            printf("%d ", i);
+        }
+        for (j = 2; j <= i/2; j++)
         {
             if (i % j == 0)
             {
                 break;
             }
-        }
-        if (i == j)
-        {
-            printf("%d ", i);
+            if (j == i / 2)
+            {
+                printf("%d ", i);
+            }
         }
     }
     return 0;
