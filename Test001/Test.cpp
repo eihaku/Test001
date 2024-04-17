@@ -253,26 +253,24 @@ int fun10_1()
 
 int fun7_4()
 {
-    FILE* fp;
-
+    char c = 'a';
     int size = 0;
     char a[26];
-    if ((fp = fopen("AtoZ.txt", "rb")) == NULL) {
-        printf("%s open errer [rb] \n", "AtoZ.txt");
-        exit(-1);
-    }
-    while (size != 26)
-    {
-        scanf("%d", &a);
-        gets_s(a);
-        for (int i = 0; a[i] != '\0'; i++)
+    while (1) {
+        scanf("%s", &a);
+        size = strlen(a);
+        if (size > 5)
         {
-            size++;
+            printf("エラー\n");
+            return 0;
         }
-        //printf("%d", size);
+        for (int i = 0; i < size; i++) {
+            c = c++;
+            if (c == 'z') {
+                printf("\nあなた負け!\n");
+            }
+        }
     }
-    fclose(fp);
-    printf("あなた負け");
     return 0;
 }
 
