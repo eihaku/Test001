@@ -430,22 +430,20 @@ int fun6_13()
     {
         fscanf(fp, "%d", &c);
         fscanf(fp, "%d", &d);
-
         if (c == a)
         {
             num = d;
-            temp2 += temp1;
-            temp1 = num;
+            temp1 += num;
         }
         else {
-            printf("%d:%d\n", a, temp2);
+            printf("%d:%d\n", a, temp1);
             a = c;
             temp1 = d;
-            temp2 = 0;
         }
+
     }
     fclose(fp);
-    printf("%d:%d\n", a, temp2);
+    printf("%d:%d\n", a, temp1);
 
     return 0;
 }
