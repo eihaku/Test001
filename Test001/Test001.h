@@ -19,7 +19,7 @@ int fun4_4(int a);
 int fun4_5(int a);
 int fun6_1();
 int fun6_2(int b);
-int fun6_3_1(int a,int b);
+//int fun6_3_1(int a,int b);
 int fun6_5(int a, int b);
 int fun6_6();    //学生成績平均値//
 int fun6_8();
