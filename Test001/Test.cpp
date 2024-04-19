@@ -2,6 +2,35 @@
 #include "Test001.h"
 #include "stdio.h"
 
+int fun6_3_1()
+{
+    int i;
+    char week[][7] = {"SUN","MON","TUE","WED","THU","FRI","SAT"};
+
+    for (i = 0; i <= 6; i++)
+    {
+        printf("  %s", week[i]);
+    }
+    printf("\n");
+    for (i = 26; i < 29; i++)
+    {
+        printf("%4d ", i);
+    }
+    for (i = 1; i <= 31; i++)
+    {
+        if (i % 7 == 4)
+        {
+            printf("%4d\n", i);
+        }
+        else
+        {
+            printf("%4d ", i);
+        }
+    }
+
+    return 0;
+}
+
 int sum_num2()
 {
     int x;
@@ -254,21 +283,64 @@ int fun10_1()
 int fun7_4()
 {
     char c = 'a';
-    int size = 0;
     char a[26];
+    char b[26];
+    int size = 0;
+    int num;
+    int temp = 1;
+    int era = 0;
+    int temp2 = 0;
+
+    printf("0:先攻 / 1:後攻 > 1\n");
+    printf("AtoZ 1-5文字を入力してください\n");
+    printf("%c ?> ", c);
+
+    c++;
+
     while (1) {
-        scanf("%s", &a);
+
+        scanf("%s", a);
         size = strlen(a);
-        if (size > 5)
+
+        if (size > 5 || size < 1)
         {
-            printf("エラー\n");
-            return 0;
+            printf("個数エラー,もう一回入力してください\n");
+            continue;
         }
         for (int i = 0; i < size; i++) {
-            c = c++;
-            if (c == 'z') {
-                printf("\nあなた負け!\n");
+            if (a[i] != c)
+            {
+                printf("アルファベット順エラー、再入力してください\n");
+                c = c  - i -1;
+                era = 1;
+                break;
             }
+            else if (a[i] == 'z') {
+                printf("\nあなた負け!\n");
+                return 0;
+            }
+            else {
+                c = c++;
+            }
+        }
+        if (era != 1)
+        {
+            num = 7 - size - temp;
+            for (int i = 0; i < num; i++)
+            {
+                a[i] = c;
+                b[i] = a[i];
+                c++;
+            }
+            temp2 = c;
+            a[num] = '\0';
+            b[num] = '\0';
+            printf("%s ?> ", a);
+        }
+        else {
+            printf("%s ?> ", b);
+            c = temp2;
+            era = 0;
         }
     }
     return 0;
@@ -453,7 +525,7 @@ int fun6_12(int b)
 {
     int num[] = { 0,1,2,3,4,5,6,7,8,9,88,99 };
     int low = 0;
-    int high = sizeof(num) / sizeof(int);
+    int high = sizeof(num) / sizeof(int)-1;
     int mid = 0;
 
     while (low <= high)
@@ -465,12 +537,12 @@ int fun6_12(int b)
             high = mid - 1;
         else
             break;
+        printf("num[%d] = %d\n", mid,num[mid]);
     }
     if (low > high)
-        printf("%d見つけない", b);
+        printf("%d見つけない\n", b);
     else
-        printf("%d見つけた", b);
-
+        printf("%d見つけた\n", b);
     return 0;
 }
 int fun6_2(int b)
