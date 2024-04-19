@@ -4,6 +4,20 @@
 #include "stdio.h"
 
 
+int fun6_3_2(int year, int month)
+{
+    int lastday[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+    if (month <= 12 && month > 0)
+    {
+        printf("num = %d", lastday[month - 1]);
+    }
+    else {
+        printf("monthÈëÁ¦¥¨¥é©`");
+    }
+
+    return 0;
+}
+
 int fun6_3_1(int year, int month)
 {
     int temp1 = year;
@@ -77,3 +91,5 @@ int runyear(int year)
     else
         return 0;
 }
+
+
