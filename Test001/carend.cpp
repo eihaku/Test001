@@ -4,17 +4,31 @@
 #include "stdio.h"
 
 
-int fun6_3_2(int year, int month)
+int fun6_3_2()
 {
+    int year,month,day;
     int lastday[] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
-    if (month <= 12 && month > 0)
-    {
-        printf("num = %d", lastday[month - 1]);
-    }
-    else {
-        printf("month入力エラー");
-    }
 
+    while (1)
+    {
+        printf("年，月を入力してください:\n");
+        scanf("%d,%d", &year, &month);
+        
+        if (month >= 12 && month < 0)
+        {
+            printf("month入力エラー\n");
+
+            printf("num = %d\n", lastday[month - 1]);
+        }
+        if (month != 2)
+        {
+            day = lastday[month - 1];
+        }
+        else {
+            day = lastday[month - 1] + runyear(year);
+        }
+        printf("num = %d\n", day);
+    }
     return 0;
 }
 
@@ -86,10 +100,13 @@ int getdays(int month, int year)
 }
 int runyear(int year)
 {
+    int flag = 0;
     if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
-        return 1;
-    else
-        return 0;
+    {
+
+        flag = 1;
+    }
+    return flag;
 }
 
 

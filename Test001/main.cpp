@@ -104,7 +104,7 @@ int main()
     //sum_num();
     //sum_num2();
     //fun6_3_1(2001,2);
-    fun6_3_2(2001, 0);
+    fun6_3_2();
 
     return 0;
 }
