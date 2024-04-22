@@ -52,23 +52,14 @@ int fun6_3_2(int year, int month)
 }
 int WhatDay(int y, int m, int d)
 {
-    int a;
+    int a, Week;
     if (m == 1 || m == 2)
     {
         m += 12;
         y--;
     }
-    int Week = (d + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
-    switch (Week)
-    {
-    case 0:  a = 1; break;
-    case 1:  a = 2; break;
-    case 2:  a = 3; break;
-    case 3:  a = 4; break;
-    case 4:  a = 5; break;
-    case 5:  a = 6; break;
-    case 6:  a = 7; break;
-    }
+    Week = (d + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
+    a = Week + 1;
     printf("Week =  %d\n", a);
     return a;
 }
