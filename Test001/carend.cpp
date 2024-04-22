@@ -12,7 +12,7 @@ int fun6_3_2(int year, int month)
 
     if (month > 12 || month < 0)
     {
-        printf("monthÈëÁ¦¥¨¥é©`\n");
+        printf("monthå…¥åŠ›ã‚¨ãƒ©ãƒ¼\n");
         return -1;
     }
     if (month != 2)
@@ -22,15 +22,15 @@ int fun6_3_2(int year, int month)
     else {
         day = lastday[month - 1] + runyear(year);
     }
-    printf("num = %d\n", day);     //ÔÂ¤ËÊýÈÕ¤¢¤ë
-    temp = WhatDay(year, month, 1);//ÔÂÒ»ÈÕ¤ÏºÎê×ÈÕ
-    num = 7 - temp;                //ÍÁê×ÈÕ¤ÎÓ‹Ëã
-    for (i = 0; i <= 6; i++)       //ÈÕ¤«¤éÍÁ¤ò±íÊ¾
+    printf("num = %d\n", day);     //æœˆã«æ•°æ—¥ã‚ã‚‹
+    temp = WhatDay(year, month, 1);//æœˆä¸€æ—¥ã¯ä½•æ›œæ—¥
+    num = 7 - temp;                //åœŸæ›œæ—¥ã®è¨ˆç®—
+    for (i = 0; i <= 6; i++)       //æ—¥ã‹ã‚‰åœŸã‚’è¡¨ç¤º
     {
         printf("  %s", week[i]);
     }
     printf("\n");
-    for (i = 0; i < temp; i++)     //Ò»ÈÕ¤ÏÈÕê×ÈÕ¤Ç¤Ï¤Ê¤¤ˆöºÏ¥¹¥Ú©`¥¹
+    for (i = 0; i < temp; i++)     //ä¸€æ—¥ã¯æ—¥æ›œæ—¥ã§ã¯ãªã„å ´åˆã‚¹ãƒšãƒ¼ã‚¹
     {
         printf("     ");
     }
@@ -38,8 +38,8 @@ int fun6_3_2(int year, int month)
     {
         if (i % num == 0)
         {
-            printf("%4d\n", i);    //ÍÁê×ÈÕ¤Ë¤Ê¤Ã¤¿¤é\n
-            num = num + 7;         //´ÎßL¤ÎÍÁê×ÈÕ¤òÓ‹Ëã
+            printf("%4d\n", i);    //åœŸæ›œæ—¥ã«ãªã£ãŸã‚‰\n
+            num = num + 7;         //æ¬¡é€±ã®åœŸæ›œæ—¥ã‚’è¨ˆç®—
         }
         else
         {
@@ -69,7 +69,7 @@ int WhatDay(int y, int m, int d)
     case 5:  a = 6; break;
     case 6:  a = 7; break;
     }
-    printf("%d", a);
+    printf("Week =  %d\n", a);
     return a;
 }
 int fun6_3_1(int year, int month)
@@ -148,5 +148,3 @@ int runyear(int year)
     }
     return flag;
 }
-
-
