@@ -24,7 +24,7 @@ int fun6_7()
             k = i + 1;
             for (j = 0; j < y; j++)
             {
-                if (data[i][j] > data[k][j])
+                if (data[i][j] > data[k][j])    //小さい順で位置変える
                 {
                     strcpy(temp, data[i]);
                     strcpy(data[i], data[k]);
