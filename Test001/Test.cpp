@@ -12,17 +12,17 @@ int fun6_7()
     "Java    ",
     "AllTokyo" };
 
-    char temp[10];
-    int i, j, k,t;
+    char temp[10];                              //databox
+    int i, j, k, t;
     int x = 5;
     int y = 10;
 
-    for (t = 0; t < x; t++)
+    for (t = 0; t < x-1; t++)                   //すべての文字列再比較
     {
-        for (i = 0; i < x - 1; i++)
+        for (i = 0; i < x - 1; i++)             //次の文字列と比較し、文字列の位置を置き換えます
         {
             k = i + 1;
-            for (j = 0; j < y; j++)
+            for (j = 0; j < y; j++)             //10 文字の文字列の値比較
             {
                 if (data[i][j] > data[k][j])    //小さい順で位置変える
                 {
