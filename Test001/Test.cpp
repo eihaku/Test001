@@ -9,22 +9,37 @@ int fun6_7()
     char data[5][10] = { "IT-PRO  ",
     "Python  ",
     "INET    ",
-    "java    ",
+    "Java    ",
     "AllTokyo" };
-    char temp[10];
-    int i, j;
-    int num = 5;
 
-    for (i = 0; i < num -1; i++)
-        for (j = i + 1; j < num; j++)
-            if (strcmp(data[i], data[j]) > 0)
+    char temp[10];
+    int i, j, k,t;
+    int x = 5;
+    int y = 10;
+
+    for (t = 0; t < x; t++)
+    {
+        for (i = 0; i < x - 1; i++)
+        {
+            k = i + 1;
+            for (j = 0; j < y; j++)
             {
-                strcpy(temp, data[i]);
-                strcpy(data[i], data[j]);
-                strcpy(data[j], temp);
+                if (data[i][j] > data[k][j])
+                {
+                    strcpy(temp, data[i]);
+                    strcpy(data[i], data[k]);
+                    strcpy(data[k], temp);
+                    break;
+                }
+                else {
+                    break;
+                }
             }
+        }
+    }
+
     printf("処理後の配列:\n");
-    for (i = 0; i < num; i++)
+    for (i = 0; i < x; i++)
     {
         printf("%s\n", data[i]);
     }
