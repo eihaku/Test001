@@ -44,6 +44,8 @@ int fun10_11();
 int fun10_12();
 int sum_num();
 int sum_num2();
+int fun6_7();
+int fun6_7_1();
 
 int runyear(int year);
 int days(int a, int b);

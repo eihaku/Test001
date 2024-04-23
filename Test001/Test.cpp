@@ -1,7 +1,35 @@
 ﻿#include <string>
 #include "Test001.h"
 #include "stdio.h"
+#include <conio.h>
 
+int fun6_7()
+{
+
+    char data[5][10] = { "IT-PRO  ",
+    "Python  ",
+    "INET    ",
+    "java    ",
+    "AllTokyo" };
+    char temp[10];
+    int i, j;
+    int num = 5;
+
+    for (i = 0; i < num -1; i++)
+        for (j = i + 1; j < num; j++)
+            if (strcmp(data[i], data[j]) > 0)
+            {
+                strcpy(temp, data[i]);
+                strcpy(data[i], data[j]);
+                strcpy(data[j], temp);
+            }
+    printf("処理後の配列:\n");
+    for (i = 0; i < num; i++)
+    {
+        printf("%s\n", data[i]);
+    }
+    return 0;
+}
 
 int sum_num2()
 {

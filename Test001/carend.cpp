@@ -25,11 +25,7 @@ int fun6_3_2(int year, int month)
     printf("num = %d\n", day);     //月に数日ある
     temp = WhatDay(year, month, 1);//月一日は何曜日
     num = 7 - temp;                //土曜日の計算
-    //for (i = 0; i < sizeof(week); i++)       //日から土を表示
-    //{
-        printf("%s", week);
-    //}
-    printf("\n");
+    printf("%s\n", week);            //日から土を表示
     for (i = 0; i < temp; i++)     //一日は日曜日ではない場合スペース
     {
         printf("     ");
@@ -77,10 +73,6 @@ int fun6_3_1(int year, int month)
         printf("  %s", week[i]);
     }
     printf("\n");
-    //for (i = 26; i < 29; i++)
-    //{
-    //    printf("     ");
-    //}
     for (i = 1; i <= num; i++)
     {
         if (i % 7 == 0)
@@ -134,7 +126,6 @@ int runyear(int year)
     int flag = 0;
     if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
     {
-
         flag = 1;
     }
     return flag;
